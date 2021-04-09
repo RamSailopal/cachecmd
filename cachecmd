@@ -21,4 +21,4 @@ then
 	echo "Pass the Cache command to execute as the second parameter"
 	exit
 fi
-(sleep 1;echo "$2";sleep 1;echo "H") | cache -U "$1" | grep -Ev "(^$)|(^Node)|(^$1>)"
+(echo "$2";echo "H") | cache -U "$1" | grep -Ev "(^$)|(^Node)|(^$1>)"
