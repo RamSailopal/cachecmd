@@ -31,4 +31,4 @@ PREREQUISITES
 INSTALLATION - Run:
 
       git clone https://github.com/RamSailopal/cachecmd.git
-      mv iriscmd/cachecmd /usr/local/bin 	
+      mv cachecmd/cachecmd /usr/local/bin 	
