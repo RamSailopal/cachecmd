@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#       Allows the interfacing of Intersystems IRIS with command line
+#
+#
+#	Parameters:
+#
+#	First - Instance name
+#
+#	Second - Namespace
+#
+#	Third - Object script command to execute
+#
+if [[ "$1" == "" ]]
+then
+        echo "Pass the namespace to execute the command in as the first parameter"
+        exit
+fi
+if [[ "$2" == "" ]]
+then
+	echo "Pass the Cache command to execute as the second parameter"
+	exit
+fi
+(sleep 1;echo "$2";sleep 1;echo "H") | cache -U "$1" | grep -Ev "(^$)|(^Node)|(^$1>)"
